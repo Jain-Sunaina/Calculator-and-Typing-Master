@@ -1,0 +1,13 @@
+// Start timing
+    clock_t startTime = clock();
+
+    // User types the text
+    printf("Start typing: ");
+    fgets(typedText, MAX_TEXT_LENGTH, stdin);
+
+    // End timing
+    clock_t endTime = clock();
+    timeTaken = (double)(endTime - startTime) / CLOCKS_PER_SEC;
+
+    // Remove newline character if present in the typed text
+    typedText[strcspn(typedText, "\n")] = '\0';mk        
